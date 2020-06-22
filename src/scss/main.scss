@@ -1,0 +1,86 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 16px;
+	background-image: url('../images/bg-pattern-desktop.svg') no-repeat;
+	background-size: cover;
+}
+
+$Light: hsl(0, 36%, 70%);
+$Darker: hsl(0, 93%, 68%);
+$FormColor: hsl(0, 6%, 24%);
+
+
+main {
+	min-height: 97vh;
+	width: 100%;
+	font-size: 0;
+	.image-container, .foot-container, .logo {
+		display: inline-block;
+	}
+	.logo, .foot-container {
+		width: 55%;
+		margin: 0 auto;
+		padding: 0 8%;
+	}
+	.logo span {
+		height: 35px;
+		width: 100%;
+		display: block;
+		background: url('../images/logo.svg') no-repeat;
+		background-size: conain;
+		margin: 65px 0;
+	}
+	.image-container {
+		float: right;
+		width: 45%;
+		height: 97vh;
+		background-image: url('../images/hero-desktop.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		
+	}
+	.foot-container {
+		margin-top: 65px;
+		font-size: 16px;
+		h1, p {
+			margin-bottom: 40px;
+		}
+		h1 {
+			font-size: 3em;
+			font-weight: 600;
+			text-transform: uppercase;
+			letter-spacing: .35em; 
+			color: rgba(black, .8);
+			span {
+				font-weight: 300;
+				color: rgba($Darker,.68);
+			}
+		}
+		
+		p {
+			font-weight: 400;
+			color: rgba($Darker,.65);
+		 }
+
+		 form {
+		 	input {
+		 		width: 100%;
+		 		border-radius: 25px;
+		 		border: 1px solid rgba($Light,.6);
+		 		padding: 15px;
+		 	}
+		 	::placeholder {
+		 		padding: 10px;
+		 		font-weight: 600;
+		 		color: rgba($Light,.6);		 			
+		 	}		
+		 		
+
+		 }
+	}
+}
