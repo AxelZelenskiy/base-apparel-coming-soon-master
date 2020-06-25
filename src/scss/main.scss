@@ -56,9 +56,11 @@ main {
 			text-transform: uppercase;
 			letter-spacing: .35em; 
 			color: rgba(black, .8);
+			line-height: 1.2em;
 			span.red {
 				font-weight: 300;
-				color: rgba($Darker,.68);
+				color: $Light;
+				// color: rgba($Darker,.68);
 			}
 			span {
 				display: block;
@@ -67,11 +69,14 @@ main {
 		
 		p {
 			font-weight: 400;
-			color: rgba($Darker,.65);
+			// color: rgba($Darker,.65);
+			color: $Light;
+			line-height: 2em;
 		 }
 
 		 form {
 		 	position: relative;
+		 	margin-top: 50px;
 		 	input {
 		 		width: 100%;
 		 		border-radius: 25px;
@@ -85,23 +90,77 @@ main {
 		 	}		
 		 	.button {
 		 		position: absolute;
-		 		top:2px;
-		 		right: 2px;
-		 		padding: 10px 40px;
+		 		top:0px;
+		 		right: 0px;
+		 		padding: 12px 40px;
 		 		border-radius: 25px;
 		 		border: none;
 		 		cursor: pointer;
 		 		outline: none;
 		 		background: linear-gradient(135deg, hsl(0, 80%, 86%),hsl(0, 74%, 74%));
 		 		box-shadow: 0px 10px 50px 5px $Light;
+		 		transition: .25s;
 		 	}
 		 	.button:hover {
-		 	      background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsla(0, 52%, 80%, 0.781));
+		 	      background: linear-gradient(135deg, hsl(0, 80%, 86%), hsla(0, 52%, 80%, 0.781));
 	              box-shadow: 0px 20px 20px 3px $Light;
+	              transition: .25s; 
 
+		 	}
+		 	.error-icon {
+		 		position: absolute;
+		 		top: 12px;
+		 		right: 100px;
+		 		opacity: 0;
 		 	}	
+		 	.error-message {
+		 		font-size: .7em;
+		 		margin: 10px 0 0 25px;
+		 		color: $Darker;
+		 		opacity: 0;
+		 	}
 			
 		 }
+		 form.Errors {
+		 	.error-icon, .error-message {
+		 		opacity: 1;
+		 	}
+		 }
 
+		 form.Errors > input {
+		 	border: 2px solid $Darker;
+		 }
+
+	}
+}
+
+@media screen and (max-width: 400px) {
+	main {
+		.image-container, .foot-container, .logo {
+				display: block;
+				padding: 0;
+				margin: 0 auto;
+				width: 100%;
+				height: auto;
+			}
+	}
+	main > .logo {
+		width: 80%;
+		> span {
+			margin: 20px 0;
+		}
+		
+	}
+	main > .image-container {
+		width: 100%;
+		float:none;
+		background: url('../images/hero-mobile.jpg') no-repeat;
+		background-size: contain;
+		padding: 40%;
+	}
+	main > .foot-container {
+		width: 80%;
+		// margin: 0 auto;
+		text-align: center;
 	}
 }

@@ -25,15 +25,17 @@
   <p>Hello fellow shoppers! We're currently building our new fashion store. 
     Add your email below to stay up-to-date with announcements and our launch deals.</p>
 
-  <form action="#">
-    <input type="email" placeholder="Email Address">
+  <form action="#" name="mail_form">
+    <input type="text" placeholder="Email Address" name="email_input">
     <button type="submit" class="button"><img src="images/icon-arrow.svg" alt="Send"></button>
+    <div class="error-icon"><img src="images/icon-error.svg" alt="error icon"></div>
+    <div class="error-message">Please, provide a valid email</div>
   </form>
     
     </div>
   </main>
     
-  <footer>
+  <footer style="margin-top:5px;">
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="#">AVZ</a>.
