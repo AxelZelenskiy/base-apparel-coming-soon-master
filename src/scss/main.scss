@@ -130,6 +130,9 @@ main {
 		 form.Errors > input {
 		 	border: 2px solid $Darker;
 		 }
+		 form.Errors > button {
+		 	padding: 13px 40px;
+		 }
 
 	}
 }

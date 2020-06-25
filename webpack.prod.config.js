@@ -1,7 +1,7 @@
 const 	path 					= require('path'),
 		webpack 				= require('webpack'),
 		HtmlWebpackPlugin 		= require('html-webpack-plugin'),
-		CleanWebpackPlugin		= require('clean-webpack-plugin'),
+		{ CleanWebpackPlugin }		= require('clean-webpack-plugin'),
 		MiniCSSExtractPlugin	= require('mini-css-extract-plugin');
 
 module.exports = {
@@ -14,12 +14,12 @@ module.exports = {
 		path		: path.resolve(__dirname,'design')
 	},
 	plugins 	: [
+				new CleanWebpackPlugin(),
 				new HtmlWebpackPlugin({
 						hash : true,
 						template : './index.html' }),
 				new MiniCSSExtractPlugin({ filename : 'css/[name].[contentHash].css'}),
 				new webpack.HotModuleReplacementPlugin(),
-			new CleanWebpackPlugin()
 	],
 	module 		: {
 		rules		: [
