@@ -5,13 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server" : "webpack-dev-server --color"
+    "server": "webpack-dev-server --color",
+    "build" : "webpack --config webpack.prod.config.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AxelZelenskiy/base-apparel-coming-soon-master.git"
   },
   "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.5.3",
     "file-loader": "^6.0.0",
     "html-loader": "^1.1.0",
